@@ -1,7 +1,249 @@
-<!Doctype html>
-<html>
-  <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylea.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
+    <title>Home</title>
+</head>
+<body>
+    <header>
+      <h3 class="h1">webname</h3>
+      
+      <span class="span">&#169mithu</span>
+        <button onclick="scrollToSection()" class="contactbutton">contact us</button>
+    </header>
+    <section class="firstsection">
+      <div class="aboutme">
+        <h1 style="font-size: 45px; color: rgb(177, 230, 230); font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;">Hey! I am Mithu</h1>
+        <img src="images/dark_mode.png" alt="" id="theme">
+        <p style="color: bisque; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">This website completely build for my own need but visitors are allowed to visit. I keep my programing projects here. I am not pro as a web dewveloper but I tried. so don't mind. </p>
+      </div>
+      <div class="something">
+        <p class="scroll">Scroll down please</p>
+      </div>
+    </section>
+    <section class="products">
+      <a href="" data-text="mithu" ></a>
+        <button id="product1" class="product"></button>
+      </a>
+      <a href=""  data-text="">
+        <button id="product2" class="product"></button>
+      </a>
+      <a href=""  data-text="">
+        <button id="product3" class="product"></button>
+      </a>
+      <a href=""  data-text="">
+        <button id="product4" class="product"></button>
+      </a>
+      <a href=""  data-text="">
+        <button id="product5" class="product"></button>
+      </a>
+      <a href=""  data-text="">
+        <button id="product6" class="product"></button>
+      </a>
+      <a href="" data-text="">
+        <button id="product7" class="product"></button>
+      </a>
+      <a href="" data-text="">
+        <button id="product8" class="product"></button>
+      </a>
 
-      <iframe width="560" height="315" src="https://www.youtube.com/https://youtu.be/SuEB89xVCY8" frameborder="0" allowfullscreen></iframe>
-  </body>
+        <a href="" data-text="">
+         <button id="product9" class="product"></button>
+        </a>
+        <a href="" data-text="">
+          <button id="product10" class="product"></button>
+        </a>
+        <a href=""  ata-text="">
+          <button id="product11" class="product"></button>
+        </a>
+        <a href=""  data-text="">
+          <button id="product12" class="product"></button>
+        </a>
+        <a href="" data-text="">
+          <button id="product13" class="product"></button>
+        </a>
+        <a href="" data-text="">
+          <button id="product14" class="product"></button>
+        </a>
+        <a href="" data-text="">
+          <button id="product15" class="product"></button>
+        </a>
+        <a href="" data-text="">
+          <button id="product16" class="product"></button>
+        </a>
+
+    </section>
+    <section class="iphone-one">
+      <div class="iphone">
+        <div class="iphone-14">
+      
+          <div class="dynamic-island"></div>
+          <div class="dynamic-island-camera"></div>
+          <div class="operator-icons">
+          <i class="bi bi-reception-4"></i>
+            5G
+          <div class="battery">100</div>
+        </div>
+        <div class="date-area">
+        
+          <span class="month"></span>
+          <span class="day-name"></span>
+          <span class="day"></span>
+        </div>
+
+        <div class="clock-area" id="clock"></div>
+        <div class="weather-icon" id="weatherIcon"></div>
+          <h2 id="temperature"></h2>
+          <h3 id="weatherCondition"></h3>
+        </div>
+        <div class="endpart">
+          <img class="torch" src="torch.png">
+          <div id="swipe-area-up">
+            <a onclick="showPage('page1')" class="a-element">
+             <p style="font-size: x-small; text-align: center;">swipe or click to unlock</p>
+              <div class="main"></div>
+            </a>
+          </div>
+          <img class="camera" src="photo_camera_FILL0_wght400_GRAD0_opsz48.png">
+        </div>
+        <div id="page1" class="page">
+        
+        </div>
+   </section>
+
+    <script>
+       function showPage(pageId) {
+   // Hide all pages
+   const pages = document.getElementsByClassName('page');
+   for (let i = 0; i < pages.length; i++) {
+     pages[i].classList.remove('active');
+   }
+ 
+   // Show the selected page
+   const page = document.getElementById(pageId);
+   page.classList.add('active');
+ };
+function scrollToSection() {
+  const section = document.querySelector('.contact-us');
+  section.scrollIntoView({ behavior: 'smooth' });
+};
+
+function updateClock() {
+  const clockElement = document.getElementById('clock');
+  const now = new Date();
+  const time = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false });
+  clockElement.textContent = time;
+}
+
+// Update clock every second
+setInterval(updateClock, 1000);
+const apiKey = '5d31c71d11ea42b13568f11bb74d1bcc';
+
+
+    // Weather condition to icon mapping
+    const weatherIcons = {
+      Thunderstorm: 'wi-thunderstorm',
+      Drizzle: 'wi-showers',
+      Rain: 'wi-rain',
+      Snow: 'wi-snow',
+      Atmosphere: 'wi-fog',
+      Clear: 'wi-day-sunny',
+      Clouds: 'wi-cloudy',
+    };
+
+    // Function to fetch weather data from API
+    async function fetchWeatherData(latitude, longitude) {
+      const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+      const response = await fetch(url);
+      const data = await response.json();
+      return data;
+    }
+
+    // Function to display weather data
+    function displayWeatherData(data) {
+  const temperatureElement = document.getElementById('temperature');
+  const weatherConditionElement = document.getElementById('weatherCondition');
+  const weatherIconElement = document.getElementById('weatherIcon');
+
+  const temperature = Math.floor(data.main.temp); // Remove the decimal part
+  const weatherCondition = data.weather[0].main;
+
+  temperatureElement.textContent = `${temperature}°`;
+
+
+  // Get the weather icon class based on the weather condition
+  const weatherIconClass = weatherIcons[weatherCondition];
+  weatherIconElement.innerHTML = `<i class="wi ${weatherIconClass}"></i>`;
+}
+
+    // Function to handle location retrieval error
+    function handleLocationError(error) {
+      console.log('Error:', error);
+      // Handle the error scenario, e.g., display a default location or an error message
+    }
+
+    // Fetch weather data and display it when the page loads
+    window.addEventListener('load', () => {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          async function (position) {
+            try {
+              const latitude = position.coords.latitude;
+              const longitude = position.coords.longitude;
+              const weatherData = await fetchWeatherData(latitude, longitude);
+              displayWeatherData(weatherData);
+            } catch (error) {
+              handleLocationError(error);
+            }
+          },
+          function (error) {
+            handleLocationError(error);
+          }
+        );
+      } else {
+        console.log('Geolocation is not supported by this browser.');
+        // Handle the scenario when geolocation is not supported
+      }
+    });
+    var swipeArea = document.getElementById('swipe-area-up');
+        var startY;
+
+        swipeArea.addEventListener('touchstart', function (event) {
+            // Get the initial touch position
+            startY = event.touches[0].clientY;
+        });
+
+        swipeArea.addEventListener('touchend', function (event) {
+            // Get the final touch position
+            var endY = event.changedTouches[0].clientY;
+
+            // Calculate the swipe distance
+            var distance = startY - endY;
+
+            // Set the URL you want to redirect to
+            var redirectURL = 'imessage.html'; // Replace with your desired URL
+
+            // Check if the swipe is upwards and perform the redirect
+            if (distance > 0) {
+                window.location.href = redirectURL;
+            }
+        });
+        var theme = document.getElementById("theme")
+        theme.onclick = function(){
+            document.body.classList.toggle("dark-theme");
+    if(document.body.classList.contains("dark-theme")){
+        theme.src = "images/light_mode.png"
+    }
+    else{
+        theme.src = "images/dark_mode.png"
+    }
+        }
+    </script>
+
+</body>
 </html>
