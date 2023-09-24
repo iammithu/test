@@ -1,0 +1,476 @@
+body{
+    background-color: var(--darkmode);
+    color: var(--lightmode);
+  }
+  header{
+    width: 100%;
+    height: 60px;
+  }
+  .h1{
+    margin-left: 50px;
+  }
+  .span{
+    position: absolute;
+    left: 93%;
+    top: 50px;
+    font-size: 10px;
+    color: rgb(192, 112, 112);
+  }
+  .products{
+    min-height: 700px;
+    max-height: min-content;
+    width: 63%;
+    border: 1px solid gray;
+    border-radius: 12px;
+    margin-right: 3px;
+    margin-left: 20px;  
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    gap: 5px;
+    row-gap: 25px;
+    background-color: rgba(169, 184, 113, 0.288);
+    box-shadow: 1.5px 3px 6px;
+  }
+  .product{
+    outline: none;
+    border-radius: 15px;
+    border: .1px ridge rgba(0, 0, 0, 0.322);
+    box-shadow: 1px 1px 1px rgb(63, 21, 21);
+    position: relative;
+    left: 10px;
+
+    top: 15px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+ 
+  .products a:hover {
+    transition: .17s;
+    transform: translateY(-12px);
+  }
+  .product:hover{
+    opacity: 0.9;
+    box-shadow: 1.3px 3px 4px rgb(63, 21, 21);
+    transition: .17s;
+    transform: translateY(-12px);
+  }
+  #product1 {
+    height: 210px;
+    width: 130px;
+    background-color: rgb(238, 141, 141);
+    
+  }
+  #product2{
+    height: 210px;
+    width: 240px;
+    background: black;
+
+  }
+  #product3{
+    height: 210px;
+    width: 160px;
+    background: gray;
+  }
+  #product4{
+    height: 210px;
+    width: 200px;
+    background: rgb(228, 239, 248);
+
+  }
+  #product5{
+    height: 210px;
+    width: 290px;
+    background: #110318;
+  }
+  #product6{
+    height: 210px;
+    width: 150px;
+    background: #528;
+    
+  }
+  #product7{
+    height: 210px;
+    width: 300px;
+    background: #254;
+
+  }
+  #product8{
+    height: 210px;
+    width: 150px;
+    background: #789;
+
+  }
+  #product9{
+    height: 210px;
+    width: 200px;
+    background: #954;
+  }
+  #product10{
+    height: 210px;
+    width: 190px;
+    background: #579855;
+  }
+  #product11{
+    height: 210px;
+    width: 240px;
+    background: #456;
+
+  }
+  #product12{
+    height: 210px;
+    width: 170px;
+    background: #753;
+
+  }
+  #product13{
+    height: 210px;
+    width: 190px;
+    background: #69530a;
+    margin-bottom: 50px;
+  }
+  #product14{
+    height: 210px;
+    width: 110px;;
+    background: #258;
+    margin-bottom: 50px;
+  }
+  #product15{
+    height: 210px;
+    width: 120px;
+    background: #852;
+    margin-bottom: 50px;
+  }
+  #product16{
+    height: 210px;
+    width: 210px;
+    background: #151;
+    margin-bottom: 50px;
+  }
+  .contactbutton{
+    height: 35px;
+    background-color: aqua;
+    outline: 0;
+    border-width: 0.1px;
+    border-radius: 16px;
+    cursor: pointer;
+    position: absolute;
+    left: 86%;
+    top: 35px;
+  }
+  .firstsection{
+    height: 450px;
+    width: 90%;
+    margin: 20px;
+    border: 1px ridge ;
+    border-radius: 40px;
+    background-color:aliceblue;
+  }
+  .aboutme{
+    border: 1px ridge;
+    max-height: 270px;
+    min-height: fit-content;
+    width: 30%;
+    background-color: rgb(6, 18, 27);
+    color: aliceblue;
+    padding: 20px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    margin: 20px;
+    border-radius: 50px;
+    }
+  .contactbutton:hover{
+    background-color: aquamarine;
+    transition: 0.28s;
+    transform: translateY(-5px);
+    box-shadow: 1px 1px 2px;
+  }
+  .something{
+    height: 20px;
+    background-color: aqua;
+    width: 20px;
+    border-radius: 50%;
+    animation: fade 10s 5s ;
+    margin-left: 2%;
+  }
+  
+  .scroll{
+    font-size: 10px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 5px;
+    animation: scrolled-text 5s 7s;
+    opacity: 0%;
+  }
+  .iphone-one{
+    position: absolute;
+    top: 580px;
+    left: 68.5%;
+    border: 1px ridge rgb(141, 201, 156);
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+    border-radius: 43px;
+    background-color: rgba(113, 184, 113, 0.288);
+    box-shadow: 1.5px 3px 6px;
+  }
+
+  .iphone{
+    border: 4px solid #3b444b;
+    border-radius: 50px;
+    width: 309px;
+    scale: .9;
+    height: 608.6px;
+    box-shadow: 1.5px 3px 6px;
+  }
+  
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .iphone-14{
+    width: 300px;
+    height: 600px;
+    border: 5px solid black;
+    background: white;
+     background-image: url("https://raw.githubusercontent.com/zouraiz523/iphone-14-pro-max/main/Phone%2014%20Pro%20Max%20and%20Dynamic%20Island/img-bg.webp");
+    background-repeat: no-repeat;
+    background-size: 301px 600px;
+    border-radius: 47px;
+    position: relative;
+  }
+  
+  .operator-name{
+    position: absolute;
+    top: 16px;
+    left: 30px;
+    font-size: 14px;
+    color: white;
+  }
+  
+  .dynamic-island{
+    width: 100px;
+    height: 25px;
+    background: black;
+    border-radius: 50px;
+    margin: 0 auto;
+    margin-top: 10px;
+    position: absolute;
+    left: 100px;
+    z-index: 99999;
+    transition: all .5s;
+  }
+  
+  .dynamic-island-camera{
+    color: white;
+    position: absolute;
+    top: 18px;
+    right: 110px;
+    background: #121212;
+    box-shadow: 0 0 1px grey;
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    z-index: 99999;
+    transition: all .5s;
+  }
+  
+  .operator-icons{
+    position: absolute;
+    top: 16px;
+    right: 50px;
+    font-size: 14px;
+    transition: all .2s;
+    color: white;
+  }
+  
+  .battery{
+    width: 20px;
+    height: 10px;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    font-size: 10px;
+    text-align: center;
+    color: #000;
+    background: #Fefefe;
+    font-weight: bold;
+    position: absolute;
+    top: 0px;
+    right: -28px;
+  }
+  
+  .date-area{
+    margin-top: 60px;
+    width: 100%;
+    text-align: center;
+    color: white;
+  }
+  
+  .clock-area{
+    margin-top: 5px;
+    width: 100%;
+    text-align: center;
+    font-size: 65px;
+    font-family:Impact, Haettenschweiler, 'Arial Bold', sans-serif;
+    color: rgb(118, 190, 35);
+  }
+  
+  .weather-icon{
+    margin-top: 10px;
+    width: 100%;
+    height: 200px;
+    position: relative;
+    left: 32%;
+    font-size: 20px;
+    color: rgb(223, 129, 129);
+
+    
+  }
+  #temperature, #weatherCondition{
+    color: rgb(221, 197, 89);
+    position: relative;
+    bottom: 220px;
+    left: 41.5%;
+    font-size: 22px;
+  }
+
+  .endpart{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    bottom: 90px;
+  }
+  .torch, .camera{
+    height: 26px;
+    border-radius: 50%;
+    margin: 25px;
+    padding: 5px;
+    background-color: rgb(127, 127, 127);
+    opacity: .6;
+    color: white;
+  }
+  .torch:hover , .camera:hover{
+    opacity: .9;
+    transition: .10s;
+
+  }
+  .camera
+  {
+    padding: 5px;
+    background-color: rgba(128, 128, 128, 0.589);
+  }
+  #swipe-area-up{
+    background-color: transparent;
+    height: 50px;
+    width: 100%;
+    position: relative;
+    top: 15px;
+    
+  }
+  .main{
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 80%;
+    height: 7px;
+    position: relative;
+    border-radius: 15px;
+    left: 10%;
+  }
+  .main:hover{
+    background-color: rgba(255, 255, 255, 1);
+  }
+  .widget{
+    margin: 0 5px;
+    padding: 5px;
+    border-radius: 10px;
+    transition: all 1s;
+    cursor: pointer;
+  }
+  
+  .widget i{
+    transition: all 1s;
+  }
+  
+  .widget:hover .spotify{
+    color: #1ED760;
+  }
+  .page.active {
+    display: block;
+}  
+  .page {
+    display: none;
+}
+  .quiet{
+    display: none;
+    color: gray;
+    transition: all 2s;
+    animation: bellNtf 2s;
+  }
+  
+  @keyframes bellNtf{
+    0%,40%,80%, 100%{color: gray;}
+    10%,60%, 90%{color: red;}
+  }
+
+  @keyframes scrolled-text {
+    0%{
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+    }
+  }
+
+  @keyframes fade{
+    0%{
+      width: 30px;
+    }
+    40%{
+      width: 100px;
+      border-radius: 10px;
+      
+    }
+    50%{
+      width: 100px;
+      border-radius: 10px;
+      
+    }
+    60%{
+      width: 100px;
+      border-radius: 10px;
+      
+    }
+    100%{
+      width: 30px;
+    }
+  }
+
+  @media (max-width:900px){
+    .products
+    {
+      width: fit-content;
+    }
+    .product{
+      width: auto;
+    }
+  }
+  @media (max-width:770px){
+    .aboutme{
+      font-size: small;
+    }
+  }
+  @media (max-width:600px){  }
+  :root{
+    --darkmode: black;
+    --lightmode: white;
+    --another: red;
+}
+.dark-theme{
+    --darkmode: white;
+    --lightmode: black;
+    --another: pink;
+}
